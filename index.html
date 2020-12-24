@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaleb McKinney</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="grid">
+            <div class="title">
+                <h2>Kaleb McKinney</h2>
+            </div>
+            <div class="links">
+                <ul>
+                    <li class="link">
+                        <button class="button-clear" onclick="scrollSkills()">Skills</button>
+                    </li>
+                    <li class="link">
+                        <button class="button-clear" onclick="scrollProjects()">Projects</button>
+                    </li>
+                    <li class="mobile-link">
+                        <button class="button-clear" id="menu" onclick="openMenu()">Menu</button>
+                    </li>
+                    <li>
+                        <button class="button-secondary" id="close" style="color: white;">x</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="intro">
+        <h1>Kaleb McKinney</h1>
+        <h2 id="typed-text"></2>
+        <div id="intro-background"></div>
+    </section>
+    <section class="skills">
+        <h1>Skills</h1>
+        <h3>Languages</h3>
+        <div class="grid" id="grid-langs">
+            <div id="python">
+                <img src="images/Python-logo-notext.svg" alt="python logo" width="100px;">
+                <p>Python</p>
+            </div>
+            <div id="js">
+                <img src="images/480px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript" width="100px">
+                <p>JavaScript</p>
+            </div>
+            <div id="csharp">
+                <img src="images/dotnet-logo.svg" alt="dotnet logo" width="100px">
+                <p>C#/.NET</p>
+            </div>
+            <div id="dart">
+                <img src="images/Dart_logo.webp" alt="dart logo" width="135px">
+                <p>Dart</p>
+            </div>
+        </div>
+        <h3>Frameworks/Tools</h3>
+        <div class="grid" id="grid-tools">
+            <div id="aspnet">
+                <img src="images/logo_aspnet-white.svg" alt="asp.net logo" width="310px">
+                <p>ASP.NET Core</p>
+            </div>
+            <div id="svelte">
+                <img src="images/399px-Svelte_Logo.svg.png" alt="svelte logo" width="80px">
+                <p>Svelte</p>
+            </div>
+            <div id="sass">
+                <img src="images/Sass_Logo_Color.svg" alt="sass logo" width="130px">
+                <p>Sass</p>
+            </div>
+            <div id="bottle">
+                <img src="images/bottlepy.png" alt="bottle logo" width="200px">
+                <p>Bottle</p>
+            </div>
+        </div>
+    </section>
+    <section class="projects">
+        <h1>Projects</h1>
+        <div class="grid">
+            <div id="journal">
+                <div id="journal-a">
+                    <h3>Personal Journal</h3>
+                    <p>A simple, lockable journal web app that stores entries locally.</p>
+                    <p>Language: Dart</p>
+                </div>
+                <div id="journal-b">
+                    <a href="https://mckkaleb.github.io/journal/index.html" class="button-clear">View Demo</a>
+                    <a href="https://github.com/mckkaleb/journal" class="button-secondary">View on GitHub</a>
+                </div>
+            </div>
+            <div id="weather">
+                <div id="weather-a">
+                    <h3>Weather App</h3>
+                    <p>A simple, location based weather app in the browser.</p>
+                    <p>Language: JavaScript</p>
+                </div>
+                <div id="weather-b">
+                    <a href="https://mckkaleb.github.io/weatherapp" class="button-clear">View Demo</a>
+                    <a href="https://github.com/mckkaleb/weatherapp" class="button-secondary">View on GitHub</a>
+                </div>
+            </div>
+            <div id="blueshift">
+                <div id="blueshift-a">
+                    <h3>blueshift</h3>
+                    <p>A Python package to create unuiqe serials.</p>
+                    <p>Language: Python</p>
+                </div>
+                <div id="blueshift-b">
+                    <a href="https://pypi.org/project/blueshift/" class="button-clear">View on PyPI</a>
+                    <a href="https://github.com/mckkaleb/blueshift" class="button-secondary">View on Github</a>
+                </div>
+            </div>
+            <div id="portfolio">
+                <div id="portfolio-a">
+                    <h3>Portfolio</h3>
+                    <p>My personal portfolio.</p>
+                    <p>Language: Sass</p>
+                </div>
+                <div id="portfolio-b">
+                    <a href="https://github.com/mckkaleb/mckkaleb.github.io" class="button-secondary">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div id="footer-a">
+            <h2>Kaleb McKinney</h2>
+        </div>
+        <div id="footer-b">
+            Find me on:
+            <a href="https://github.com/mckkaleb">GitHub</a> |
+            <a href="https://dev.to/mckkaleb">Dev Community</a>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
