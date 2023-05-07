@@ -1,139 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="utf-8">
     <title>Kaleb McKinney</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-    <header class="header">
-        <div class="grid">
-            <div class="title">
-                <h2>Kaleb McKinney</h2>
-            </div>
-            <div class="links">
-                <ul>
-                    <li class="link">
-                        <button class="button-clear" onclick="scrollSkills()">Skills</button>
-                    </li>
-                    <li class="link">
-                        <button class="button-clear" onclick="scrollProjects()">Projects</button>
-                    </li>
-                    <li class="mobile-link">
-                        <button class="button-clear" id="menu" onclick="openMenu()">Menu</button>
-                    </li>
-                    <li>
-                        <button class="button-secondary" id="close" style="color: white;">x</button>
-                    </li>
-                </ul>
-            </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- imported CSS are concatenated and added automatically -->
+  </head>
+  <body>
+      <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="/" class="navbar-item">
+        Kaleb McKinney
+      </a>
+    </div>
+  </nav>
+  <section>
+    <div class="block has-text-white has-background-primary py-6">
+      <div class="container p-5 py-6">
+        <h1 class="is-size-1">Hello there!</h1>
+        <p>I'm a computer science student at East Tennessee State University who knows a little about webdev</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="card is-pulled-right">
+        <div class="card-image">
+          <figure class="image is-1by1" id="pic">
+            <img src="/static/292031753_1242246002980134_544443723731797458_n.jpg" alt="Picture of myself" class="is-rounded">
+          </figure>
         </div>
-    </header>
-    <section class="intro">
-        <h1>Kaleb McKinney</h1>
-        <h2 id="typed-text"></2>
-        <div id="intro-background"></div>
-    </section>
-    <section class="skills">
-        <h1>Skills</h1>
-        <h3>Languages</h3>
-        <div class="grid" id="grid-langs">
-            <div id="python">
-                <img src="images/Python-logo-notext.svg" alt="python logo" width="100px;">
-                <p>Python</p>
+      </div>
+      <h1 class="is-size-2 pt-2">Look at these shiny awards</h1>
+      <div class="block py-5">
+        <h2 class="is-size-3 py-3"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg></span> AP Scholar with Distinction - 2022</h2>
+        <h2 class="is-size-3 py-3"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg></span> President's Award for Educational Excellence - 2023</h2>
+      </div>
+    </div>
+  </section>
+  <section class="has-background-info-dark has-text-white">
+    <div class="container">
+      <h1 class="is-size-2 pt-2">Check out these projects</h1>
+      <div class="columns py-4">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="content">
+                <h4>Personal Journal</h4>
+                <p>A simple web-based journal app with a basic lock feature</p>
+                <a href="https://mckkaleb.github.io/journal/index.html" class="button is-link is-light">Check it out</a>
+                <a href="https://github.com/mckkaleb/journal" class="button is-primary is-light">View on GitHub</a>
+                <hr>
+                <h5>Lighthouse Scores</h5>
+                <p>
+                  Preformace
+                  100%
+                  <progress class="progress is-success" max="100" value="100">100%</progress>
+                </p>
+                <p>
+                  Accessibility
+                  94%
+                  <progress class="progress is-success" max="100" value="94">94%</progress>
+                </p>
+                <p>
+                  Best Practices
+                  100%
+                  <progress class="progress is-success" max="100" value="100">100%</progress>
+                </p>
+              </div>
             </div>
-            <div id="js">
-                <img src="images/480px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript" width="100px">
-                <p>JavaScript</p>
-            </div>
-            <div id="csharp">
-                <img src="images/dotnet-logo.svg" alt="dotnet logo" width="100px">
-                <p>C#/.NET</p>
-            </div>
-            <div id="dart">
-                <img src="images/Dart_logo.webp" alt="dart logo" width="135px">
-                <p>Dart</p>
-            </div>
+          </div>
         </div>
-        <h3>Frameworks/Tools</h3>
-        <div class="grid" id="grid-tools">
-            <div id="aspnet">
-                <img src="images/logo_aspnet-white.svg" alt="asp.net logo" width="310px">
-                <p>ASP.NET Core</p>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="content">
+                <h4>Weather App</h4>
+                <p>A weather app that used device location to provide current weather and forecasts</p>
+                <a href="https://mckkaleb.github.io/weatherapp" class="button is-link is-light">Check it out</a>
+                <a href="https://github.com/mckkaleb/weatherapp" class="button is-primary is-light">View on GitHub</a>
+                <hr>
+                <h5>Lighthouse Scores</h5>
+                <p>
+                  Preformace
+                  99%
+                  <progress class="progress is-success" max="100" value="99">99%</progress>
+                </p>
+                <p>
+                  Accessibility
+                  100%
+                  <progress class="progress is-success" max="100" value="100">100%</progress>
+                </p>
+                <p>
+                  Best Practices
+                  92%
+                  <progress class="progress is-success" max="100" value="92">92%</progress>
+                </p>
+              </div>
             </div>
-            <div id="svelte">
-                <img src="images/399px-Svelte_Logo.svg.png" alt="svelte logo" width="80px">
-                <p>Svelte</p>
-            </div>
-            <div id="sass">
-                <img src="images/Sass_Logo_Color.svg" alt="sass logo" width="130px">
-                <p>Sass</p>
-            </div>
-            <div id="bottle">
-                <img src="images/bottlepy.png" alt="bottle logo" width="200px">
-                <p>Bottle</p>
-            </div>
+          </div>
         </div>
-    </section>
-    <section class="projects">
-        <h1>Projects</h1>
-        <div class="grid">
-            <div id="journal">
-                <div id="journal-a">
-                    <h3>Personal Journal</h3>
-                    <p>A simple, lockable journal web app that stores entries locally.</p>
-                    <p>Language: Dart</p>
-                </div>
-                <div id="journal-b">
-                    <a href="https://mckkaleb.github.io/journal/index.html" class="button-clear">View Demo</a>
-                    <a href="https://github.com/mckkaleb/journal" class="button-secondary">View on GitHub</a>
-                </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="content">
+                <h4>blueshift</h4>
+                <p>A Python package for generating large amounts of unique serial numbers</p>
+                <a href="https://pypi.org/project/blueshift/" class="button is-link is-light">Check it out on PyPi</a>
+              </div>
             </div>
-            <div id="weather">
-                <div id="weather-a">
-                    <h3>Weather App</h3>
-                    <p>A simple, location based weather app in the browser.</p>
-                    <p>Language: JavaScript</p>
-                </div>
-                <div id="weather-b">
-                    <a href="https://mckkaleb.github.io/weatherapp" class="button-clear">View Demo</a>
-                    <a href="https://github.com/mckkaleb/weatherapp" class="button-secondary">View on GitHub</a>
-                </div>
-            </div>
-            <div id="blueshift">
-                <div id="blueshift-a">
-                    <h3>blueshift</h3>
-                    <p>A Python package to create unuiqe serials.</p>
-                    <p>Language: Python</p>
-                </div>
-                <div id="blueshift-b">
-                    <a href="https://pypi.org/project/blueshift/" class="button-clear">View on PyPI</a>
-                    <a href="https://github.com/mckkaleb/blueshift" class="button-secondary">View on Github</a>
-                </div>
-            </div>
-            <div id="portfolio">
-                <div id="portfolio-a">
-                    <h3>Portfolio</h3>
-                    <p>My personal portfolio.</p>
-                    <p>Language: Sass</p>
-                </div>
-                <div id="portfolio-b">
-                    <a href="https://github.com/mckkaleb/mckkaleb.github.io" class="button-secondary">View on GitHub</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
-    <footer class="footer">
-        <div id="footer-a">
-            <h2>Kaleb McKinney</h2>
-        </div>
-        <div id="footer-b">
-            Find me on:
-            <a href="https://github.com/mckkaleb">GitHub</a> |
-            <a href="https://dev.to/mckkaleb">Dev Community</a>
-        </div>
-    </footer>
-    <script src="index.js"></script>
-</body>
+      </div>
+      <h3 class="is-size-3 pb-2" style="text-align: center;">View the source code for this site, <a href="https://github.com/mckkaleb/mckkaleb.github.io" class="has-text-white">click here <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
+    </div>
+  </section>
+  <section class="has-background-success has-text-white">
+    <div class="container">
+      <h1 class="is-size-2 pt-2">HackerRank Centifications</h1>
+      <div class="block py-5">
+        <h3 class="is-size-3 py-3"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span> <a href="https://www.hackerrank.com/certificates/b9955a2e40de" class="has-text-white">JavaScript (Basic) <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></h3>
+        <h3 class="is-size-3 py-3"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg> <a href="https://www.hackerrank.com/certificates/ae969d22212d" class="has-text-white">Python (Basic) <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></span></h3>
+      </div>
+    </div>
+  </section>
+  <div class="footer">
+    <div class="content has-text-centered">
+      <p>Find me on <a href="https://github.com/mckkaleb">Github</a> and <a href="https://dev.to/mckkaleb">Dev.to</a></p>
+    </div>
+  </div>
+  </body>
+  <style>
+    @media screen and (min-width: 1178px) {
+      #pic {
+        margin-top: -160px;
+        width: 250px; 
+      }
+    }
+    @media screen and (max-width: 1178px) {
+      #pic {
+        width: 250px;
+      }
+    }
+  </style>
 </html>
